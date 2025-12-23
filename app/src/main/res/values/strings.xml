@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="todo_list">لیست کارها</string>
+    <string name="add_task">افزودن کار</string>
+    <string name="task_title">عنوان کار</string>
+    <string name="task_description">توضیحات</string>
+    <string name="save">ذخیره</string>
+    <string name="cancel">لغو</string>
+    <string name="delete">حذف</string>
+    <string name="edit">ویرایش</string>
+    <string name="mark_completed">انجام شده</string>
+    <string name="mark_pending">در حال انجام</string>
+    <string name="filter">فیلتر</string>
+    <string name="all_tasks">همه کارها</string>
+    <string name="completed_tasks">کارهای انجام شده</string>
+    <string name="pending_tasks">کارهای در حال انجام</string>
+    <string name="no_tasks">کاری وجود ندارد</string>
+    <string name="add_first_task">اولین کار خود را اضافه کنید!</string>
+    <string name="high_priority">اولویت بالا</string>
+    <string name="medium_priority">اولویت متوسط</string>
+    <string name="low_priority">اولویت پایین</string>
+</resources>
