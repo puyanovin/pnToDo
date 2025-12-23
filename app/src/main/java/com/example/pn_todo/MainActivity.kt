@@ -8,13 +8,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.pn_todo.ui.TodoScreen
-import com.example.pn_todo.ui.theme.TodoAppTheme  // ← ui.theme (با نقطه)
+import com.example.pn_todo.ui.theme.TodoAppTheme
+import androidx.compose.ui.unit.LayoutDirection
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TodoAppTheme {
+            TodoAppTheme(direction = LayoutDirection.Rtl) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background

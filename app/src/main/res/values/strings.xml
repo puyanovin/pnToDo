@@ -20,4 +20,6 @@
     <string name="high_priority">اولویت بالا</string>
     <string name="medium_priority">اولویت متوسط</string>
     <string name="low_priority">اولویت پایین</string>
+    <string name="task_hint">کار جدید را وارد کنید...</string>
+    <string name="empty_list">📝 لیست کارهای شما خالی است</string>
 </resources>

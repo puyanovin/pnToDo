@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.example.pn_todo.Task
+import androidx.compose.ui.res.stringResource
+import com.example.pn_todo.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,7 +69,7 @@ fun TodoScreen() {
                 OutlinedTextField(
                     value = newTaskText,
                     onValueChange = { newTaskText = it },
-                    label = { Text("کار جدید...") },
+                    label = { Text(stringResource(R.string.task_hint)) },
                     modifier = Modifier.weight(1f),
                     singleLine = true
                 )
@@ -86,7 +88,7 @@ fun TodoScreen() {
                         }
                     }
                 ) {
-                    Text("افزودن")
+                    Text(stringResource(R.string.add_task))
                 }
             }
             
@@ -98,7 +100,7 @@ fun TodoScreen() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("کاری برای نمایش وجود ندارد")
+                    Text(stringResource(R.string.empty_list))
                 }
             } else {
                 LazyColumn(
@@ -169,7 +171,7 @@ fun TaskItem(
             )
             
             IconButton(onClick = { onTaskDeleted(task) }) {
-                Icon(Icons.Filled.Delete, "حذف")
+                Icon(Icons.Filled.Delete, stringResource(R.string.delete))
             }
         }
     }

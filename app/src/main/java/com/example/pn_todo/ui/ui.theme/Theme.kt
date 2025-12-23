@@ -5,6 +5,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 
 private val DarkColorScheme = darkColorScheme(
     primary = androidx.compose.ui.graphics.Color(0xFFBB86FC),
@@ -21,6 +23,7 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun TodoAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    direction: LayoutDirection = LayoutDirection.Rtl,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (darkTheme) {
@@ -31,6 +34,10 @@ fun TodoAppTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
+        content = content
+    )
+    androidx.compose.runtime.CompositionLocalProvider(
+        LocalLayoutDirection provides direction,
         content = content
     )
 }
