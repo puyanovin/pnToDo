@@ -10,8 +10,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
+import com.example.pn_todo.R
 import com.example.pn_todo.Task
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,7 +51,7 @@ fun TodoScreen() {
                     }
                 }
             ) {
-                Icon(Icons.Filled.Add, "افزودن کار")
+                Icon(Icons.Filled.Add, stringResource(id = R.string.add_task))
             }
         }
     ) { paddingValues ->

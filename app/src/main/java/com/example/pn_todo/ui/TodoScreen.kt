@@ -15,14 +15,16 @@ import androidx.compose.ui.unit.dp
 import com.example.pn_todo.Task
 import androidx.compose.ui.res.stringResource
 import com.example.pn_todo.R
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.ui.res.painterResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TodoScreen() {
     var tasks by remember { mutableStateOf(listOf(
         Task(1, "یادگیری کاتلین", true),
-        Task(2, "ساخت اپلیکیشن اندروید"),
-        Task(3, "تمرین Jetpack Compose")
+        //Task(2, "ساخت اپلیکیشن اندروید"),
+        //Task(3, "تمرین Jetpack Compose")
     ))}
     
     var newTaskText by remember { mutableStateOf("") }
@@ -31,10 +33,24 @@ fun TodoScreen() {
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text(
-                        text = "📝 TodoApp",
-                        style = MaterialTheme.typography.headlineSmall
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically, // این خط برای تراز عمودی حیاتی است
+                        modifier = Modifier.padding(start = 4.dp) // فاصله کلی از لبه (اختیاری)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.CheckCircle,
+                            //painterResource(id = R.drawable.my_custom_icon),
+                            contentDescription = "آیکن برنامه",
+                            modifier = Modifier
+                                .size(28.dp) // اندازه آیکن را حتما مشخص کنید
+                                .padding(end = 12.dp) // فاصله بین آیکن و متن
+                        )
+                        Text(
+                            text = stringResource(id = R.string.app_title),
+                            style = MaterialTheme.typography.headlineSmall
+                        )
+                    }
+
                 }
             )
         },
@@ -51,7 +67,7 @@ fun TodoScreen() {
                     }
                 }
             ) {
-                Icon(Icons.Filled.Add, "افزودن کار")
+                Icon(Icons.Filled.Add, stringResource(id = R.string.add_task))
             }
         }
     ) { paddingValues ->

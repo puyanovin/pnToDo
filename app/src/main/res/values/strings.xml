@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TodoApp</string>
+    <string name="app_name">فعالیت ها</string>
+    <string name="app_title">فعالیت ها</string>
     <string name="todo_list">لیست کارها</string>
     <string name="add_task">افزودن کار</string>
     <string name="task_title">عنوان کار</string>
